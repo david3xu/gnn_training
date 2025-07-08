@@ -1,0 +1,12 @@
+torch>=2.0.0
+torch-geometric>=2.0.0
+transformers>=4.0.0
+psutil
+fastapi
+uvicorn
+pandas
+matplotlib
+tqdm
+pyyaml
+scikit-learn
+spacy

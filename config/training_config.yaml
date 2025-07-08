@@ -1,0 +1,41 @@
+data:
+  path: "/path/to/maintie"
+  complexity_levels:
+    - "g-0"
+    - "g-1"
+    - "g-2"
+    - "g-3"
+
+models:
+  simple_gcn:
+    input_dim: 768
+    hidden_dim: 256
+    dropout: 0.2
+  gat:
+    input_dim: 768
+    hidden_dim: 256
+    heads: 8
+    dropout: 0.2
+  multi_task:
+    input_dim: 768
+    hidden_dim: 256
+    heads: 8
+    dropout: 0.2
+    entity_weight: 1.0
+    relation_weight: 0.5
+
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 1e-3
+  weight_decay: 1e-4
+  patience: 20
+  max_grad_norm: 1.0
+
+evaluation:
+  batch_size: 32
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
